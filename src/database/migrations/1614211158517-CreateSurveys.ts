@@ -1,20 +1,20 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm'
-import { userTableName } from '../../models'
+import { surveyTableName } from '../../models'
 import { idColumn, timestampColumns } from './utils'
 
-export class CreateUsers1614119857591 implements MigrationInterface {
+export class CreateSurveys1614211158517 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
-        name: userTableName,
+        name: surveyTableName,
         columns: [
           idColumn,
           {
-            name: 'name',
+            name: 'title',
             type: 'varchar',
           },
           {
-            name: 'email',
+            name: 'description',
             type: 'varchar',
             isUnique: true,
           },
@@ -25,6 +25,6 @@ export class CreateUsers1614119857591 implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable(userTableName)
+    await queryRunner.dropTable(surveyTableName)
   }
 }

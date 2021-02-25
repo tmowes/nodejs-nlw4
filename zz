@@ -7,3 +7,4 @@ yarn typeorm migration:revert
 
 "logging": true, => To show sql logs on terminal
 
+    "posttest": "Remove-Item ./src/database/database.test.sqlite"
