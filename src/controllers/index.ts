@@ -1,3 +1,5 @@
 export { default as UserController } from './UserController'
 export { default as SurveyController } from './SurveyController'
 export { default as SendMailController } from './SendMailController'
+export { default as AnswersController } from './AnswersController'
+export { default as NpsController } from './NpsController'

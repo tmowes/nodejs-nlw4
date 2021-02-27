@@ -8,17 +8,19 @@
     "typeorm": "tsnd ./node_modules/typeorm/cli.js",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx .",
     "lint:f": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "test": "set NODE_ENV=test && jest"
+    "test": "jest -i"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
     "handlebars": "^4.7.7",
     "nodemailer": "^6.4.18",
     "reflect-metadata": "^0.1.13",
     "sqlite3": "^5.0.2",
     "typeorm": "^0.2.31",
-    "uuidv4": "^6.2.6"
+    "uuidv4": "^6.2.6",
+    "yup": "^0.32.9"
   },
   "devDependencies": {
     "@types/cors": "^2.8.10",
